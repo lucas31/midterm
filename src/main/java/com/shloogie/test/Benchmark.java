@@ -18,7 +18,7 @@ public class Benchmark {
 		s.b.author = "Olek Zdybel";
 		s.b.title = "Jak zjebac dobrze dzialajace cos";
 		s.b.noPages = 1;
-		s.b.publishedOn = LocalDate.of(2017, 05, 18);
+		//s.b.publishedOn = LocalDate.of(2017, 05, 18);
 		s.b.s = new Student();
 		s.b.s.name = "Jola";
 		s.b.s.id = 50;
@@ -44,7 +44,7 @@ public class Benchmark {
 		b.author = "Witold Bołt";
 		b.title = "JVM Internals Handbook";
 		b.noPages = 778;
-		b.publishedOn = LocalDate.of(2017, 10, 01);
+		//b.publishedOn = LocalDate.of(2017, 10, 01);
 		b.positivelyReceived = true;
 		b.checkCharacter = 'w';
 		b.s = s;
@@ -53,13 +53,14 @@ public class Benchmark {
 		//System.out.println(p.toJson(s));
 		//System.out.println(g.toJson(s));
 		
-		//System.out.println(p.toJson(b));
+	    //System.out.println(p.toJson(b));
 		//System.out.println(g.toJson(b));
 		
-		for(int i=0; i<10; i++) {
+		for(int i=0; i<1; i++) {
 			compare(s, p, g);
-			//compare(b, p, g);
+			compare(b, p, g);
 		}
+		//p.getDifs();
 	}
 	private static void compare(Object o, App j, Gson g) {
 		long jitTime = measure(j::toJson, o);
@@ -69,9 +70,10 @@ public class Benchmark {
 	}
 
 	private static long measure(Function<Object, String> converter, Object o) {
-		converter.apply(o);
 		long t1 = System.currentTimeMillis();
-		for (int i = 0; i < 500000; i++) {
+		converter.apply(o);
+		
+		for (int i = 0; i < 50000; i++) {
 			converter.apply(o);
 		}
 		return System.currentTimeMillis() - t1;
