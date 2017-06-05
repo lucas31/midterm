@@ -22,7 +22,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/studfiz/lmakowski/Pobrane/jboss-javassist-javassist-6a3ed31/javassist.jar"/>
 	<classpathentry kind="lib" path="/home/studfiz/lmakowski/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

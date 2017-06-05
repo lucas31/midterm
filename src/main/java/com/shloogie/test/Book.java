@@ -18,7 +18,6 @@ public class Book {
 
 	public Boolean positivelyReceived;
 	public char checkCharacter;
-	@SuppressWarnings("unused")
 	private float wantedToSoldRatio = 6.66f;
 	
 	public float getWantedToSoldRatio() {
