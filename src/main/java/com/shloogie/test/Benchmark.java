@@ -15,8 +15,8 @@ public class Benchmark {
 		s.id = 10;
 		s.name = "Witek";
 		s.b = new Book();
-		s.b.author = "Olek Zdybel";
-		s.b.title = "Jak zjebac dobrze dzialajace cos";
+		s.b.author = "Jakis nieznany";
+		s.b.title = "Jak zepsuc dobrze dzialajace cos";
 		s.b.noPages = 1;
 		//s.b.publishedOn = LocalDate.of(2017, 05, 18);
 		s.b.s = new Student();
@@ -30,11 +30,11 @@ public class Benchmark {
 		s.b.s.b.s.id = 666;
 		s.b.s.b.s.b = new Book();
 		s.b.s.b.s.b.author = "Bosman";
-		s.b.s.b.s.b.title = "Moje wyklady sa zajebiste polecam 10/10";
+		s.b.s.b.s.b.title = "Ile mozna nad tym siedziec";
 		s.b.s.b.s.b.s = new Student();
 		s.b.s.b.s.b.s.id = 5;
 		s.b.s.b.s.b.s.b = new Book();
-		s.b.s.b.s.b.s.b.author = "Admirał Bołt";
+		s.b.s.b.s.b.s.b.author = "Człowiek Johny";
 		s.b.s.b.s.b.s.b.title = "Zdane, brawo";
 		s.b.s.b.s.b.s.b.positivelyReceived = true;
 		/*s.b.s.b.s.b.s.b.s = new Student();
@@ -50,11 +50,11 @@ public class Benchmark {
 		b.s = s;
 		
 		
-		//System.out.println(p.toJson(s));
-		//System.out.println(g.toJson(s));
+		System.out.println(p.toJson(s));
+		System.out.println(g.toJson(s));
 		
-	    //System.out.println(p.toJson(b));
-		//System.out.println(g.toJson(b));
+	    System.out.println(p.toJson(b));
+		System.out.println(g.toJson(b));
 		
 		for(int i=0; i<1; i++) {
 			compare(s, p, g);
@@ -73,7 +73,7 @@ public class Benchmark {
 		long t1 = System.currentTimeMillis();
 		converter.apply(o);
 		
-		for (int i = 0; i < 50000; i++) {
+		for (int i = 0; i < 1000000; i++) {
 			converter.apply(o);
 		}
 		return System.currentTimeMillis() - t1;
