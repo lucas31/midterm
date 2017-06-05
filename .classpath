@@ -22,7 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/studfiz/lmakowski/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar">
+	<classpathentry kind="lib" path="res/gson-2.8.0.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="com.google.code.gson"/>
